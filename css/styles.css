@@ -333,6 +333,10 @@ input, label, select, textarea, ::placeholder{
     color:#fff;
 }
 
+.ContrCardItem a{
+    text-decoration: none;
+}
+
 .ContrCardItem{
     border:1px solid #ffffff42;
     padding:20px;
