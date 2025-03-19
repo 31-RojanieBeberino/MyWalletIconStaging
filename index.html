@@ -4,16 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyWalletIcon</title>
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
+
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+
+
+
 
     <link href="css/styles.css" rel="stylesheet">
-    
+
+    <style>
+
+        /* Ensure proper spacing */
+        .carousel .row {
+            display: flex;
+            justify-content: center;
+        }
+
+        .carousel-item {
+            transition: transform 0.6s ease-in-out;
+        }
+
+        /* Position the carousel container relative */
+.position-relative {
+    position: relative;
+}
+
+/* Move buttons outside */
+.custom-prev, .custom-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Left button (Move more to the left) */
+.carousel-control-prev {
+    left: -100px!important;
+}
+
+/* Right button (Move more to the right) */
+.carousel-control-next {
+    right: -100px;
+}
+
+/* Make sure icons are visible */
+.custom-prev span, .custom-next span {
+    filter: invert(1);
+}
+
+/* Responsive Fix: Adjust button position on smaller screens */
+@media (max-width: 768px) {
+    .custom-prev {
+        left: -30px;
+    }
+    .custom-next {
+        right: -30px;
+    }
+}
+    </style>
+
     
 </head>
 <body>
@@ -31,13 +92,16 @@
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Abilities</a>
+                            <a class="nav-link" href="#abilities">Abilities</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
+                            <a class="nav-link" href="#pricing">Pricing</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Under The Hood</a>
+                            <a class="nav-link" href="#under-the-hood">Under The Hood</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
                         </li>
                         <!-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -100,10 +164,10 @@
             </div>
 
             <div class="contentText d-flex flex-column align-items-center justify-content-center gap-2">
-                <p>MyWalletIcon simplifies wallet identification with unique SVG icons for each address—no setup needed, just a simple URL request. Easily integrate icons by embedding <\img
-                
+                <p>MyWalletIcon simplifies wallet identification with unique SVG icons for each address—no setup needed, just a simple URL request. Easily integrate icons by embedding 
+                <br>
                 <code>
-                    src="https://mywalleticon.com/usericon/YOUR_WALLET_ADDRESS_HERE" /&gt;
+                    <\img src="https://mywalleticon.com/usericon/YOUR_WALLET_ADDRESS_HERE" /&gt;
                 </code>
 
                      wallet is connected. Test it at https://mywalleticon.com/usericon/YOUR_WALLET_ADDRESS_HERE (limited bandwidth). For full access, check the Pricing section and enhance your wallet display today!
@@ -153,7 +217,7 @@
 
 
 
-    <section class="container-fluid pt-5 pb-5 pe-2 ps-2  imgSecBg">
+    <section class="container-fluid pt-5 pb-5 pe-2 ps-2  imgSecBg" id="abilities">
         <div class="container d-flex flex-column gap-5 align-items-center justify-content-center w-100 subSection">
             
             <div class="d-flex flex-column gap-1">
@@ -164,7 +228,7 @@
                 <div class="d-flex flex-column gap-4 align-items-center innerSec">
                     <div class="d-flex gap-4 align-items-center secItemsIcon">
                         <img class="iconImg" src="/img/icon.webp">
-                        <p>Display Beautiful Icons For User Walletst</p>
+                        <p>Display Beautiful Icons For User Wallets</p>
                     </div>
                     <div class="d-flex gap-4 align-items-center secItemsIcon">
                         <img class="iconImg" src="/img/icon1.webp">
@@ -181,10 +245,6 @@
                         <p>Use Simplified API With Unlimited Rate</p>
                     </div>
                     <div class="d-flex gap-4 align-items-center secItemsIcon">
-                        <img class="iconImg" src="/img/icon1.webp">
-                        <p>Get IICO Tokens With  Discount</p>
-                    </div>
-                    <div class="d-flex gap-4 align-items-center secItemsIcon">
                         <img class="iconImg" src="/img/icon2.webp">
                         <p>See Pricing Page For Details</p>
                     </div>
@@ -199,13 +259,12 @@
 
 
 
-            
-            <div class="d-flex gap-3 w-100 mt-5">
+            <div class="d-flex flex-column gap-1 secItemsIcon">
+                <p class="text-center">Unlock More Possibilities</p>
+                <h2 class="text-center">IICO Token</h2>
+            </div>
+            <div class="d-flex gap-3 w-100 mt-3">
                 <div class="d-flex flex-column gap-4 align-items-center justify-content-start innerSec">
-                    <div class="d-flex flex-column gap-1 secItemsIcon">
-                        <p>Unlock More Possibilities</p>
-                        <h2>IICO Token</h2>
-                    </div>
                     <div class="d-flex gap-4 align-items-center secItemsIcon">
                         <img class="iconImg" src="/img/icon3.webp">
                         <p>IICO Token Is Needed To Customize Wallet Icon OR Set Wallet Alias</p>
@@ -213,6 +272,10 @@
                     <div class="d-flex gap-4 align-items-center secItemsIcon">
                         <img class="iconImg" src="/img/icon4.webp">
                         <p>1 IICO Token Costs 1 USDC Token. You Can Buy It Here</p>
+                    </div>
+                    <div class="d-flex gap-4 align-items-center secItemsIcon">
+                        <img class="iconImg" src="/img/icon1.webp">
+                        <p>Get IICO Tokens With  Discount</p>
                     </div>
                 </div>
                 <div class="d-flex flex-column gap-4 align-items-center innerSec">
@@ -327,22 +390,22 @@
 
 
 
-        <div class="container d-flex gap-5 align-items-center justify-content-center subSection">
+        <div class="container d-flex gap-5 align-items-center justify-content-center subSection" id="under-the-hood">
         
             <div class="d-flex flex-column gap-3 innerSec ps-5">
                 <h2>Decentralized Approach Under The Hood:</h2>
                 <div class="d-flex flex-column gap-2">
                     <div class="d-flex gap-3">
                         <img class="listIcon" src="img/checkIcon.webp">
-                        <p>User B: Sets icon X for the own wallet and pays 1 IICO</p>
+                        <p>We have smart-contract which provides CID by wallet address</p>
                     </div>
                     <div class="d-flex gap-3">
                         <img class="listIcon" src="img/checkIcon.webp">
-                        <p>User A: Receives bonus 0.5 IICO</p>
+                        <p>Icons deployed on IPFS protocol</p>
                     </div>
                     <div class="d-flex gap-3">
                         <img class="listIcon" src="img/checkIcon.webp">
-                        <p>Platform burns 0.5 IICO</p>
+                        <p>Anyone can get CID by wallet address from the smart-contract and load icon through IPFS protocol</p>
                     </div>
                 </div>
             </div>
@@ -355,29 +418,109 @@
 
 
 
-
-    <section class="container-fluid pt-5 pb-5 pe-2 ps-2">
+    <section class="container-fluid pt-5 pb-5 pe-2 ps-2" id="pricing">
         <div class="container d-flex flex-column gap-5 align-items-center justify-content-center subSection">
             <h2>Check Our Pricing</h2>
-            <div class="checkoutCards d-flex gap-4 align-items-center">
-                <div class="chkCardItem smCard">
-                    <h4>Integration <br>Endpoint</h4>
-                    <h2>FREE</h2>
-                    <p>Less Than 100 Requests Per Day (IP/Origin)</p>
+    
+            <!-- Bootstrap Multi-Item Carousel -->
+            <div id="pricingCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+    
+                    <!-- First Slide -->
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="chkCardItem smCard">
+                                    <h4>Integration <br>Endpoint</h4>
+                                    <h2>FREE</h2>
+                                    <p>Less Than 100 Requests Per Day (IP/Origin)</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="chkCardItem smCard">
+                                    <h4>Integration <br>Endpoint</h4>
+                                    <h2>30$ <span>Per Month</span></h2>
+                                    <p>Less Than 1000 Requests Per Day (IP/Origin)</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="chkCardItem smCard">
+                                    <h4>Integration <br>Endpoint</h4>
+                                    <h2>80$ <span>Per Month</span></h2>
+                                    <p>Less Than 10000 Requests Per Day (IP/Origin)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Second Slide (Repeat for more items) -->
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="chkCardItem smCard">
+                                    <h4>Integration <br>Endpoint</h4>
+                                    <h2>250$ <span>Per Month</span></h2>
+                                    <p>Unlimited requests per day (IP/origin)</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="chkCardItem smCard">
+                                    <h4>Contact us <br>to</h4>
+                                    <h2>95$</h2>
+                                    <p>Get 100 IICO tokens</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="chkCardItem smCard">
+                                    <h4>Contact us <br>to</h4>
+                                    <h2>850$</h2>
+                                    <p>Get 1000 IICO tokens</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Second Slide (Repeat for more items) -->
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="chkCardItem smCard">
+                                    <h4>Contact us <br>to</h4>
+                                    <h2>7000$</h2>
+                                    <p>Get 10000 IICO tokens</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="chkCardItem smCard">
+                                    <h4>Customized skin<br>for your app</h4>
+                                    <h2>1000$</h2>
+                                    <p>Register custom icons set of 100 icons</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="chkCardItem smCard">
+                                    <h4>Customized skin<br>for your app</h4>
+                                    <h2>1500$</h2>
+                                    <p>Register custom icons set of 200 icons</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
                 </div>
-                <div class="chkCardItem lgCard">
-                    <h4>Integration <br>Endpoint</h4>
-                    <h2>30$ <span>Per Month</span></h2>
-                    <p> Less Than 1000 Requests Per Day (IP/Origin)</p>
-                </div>
-                <div class="chkCardItem smCard">
-                    <h4>Integration <br>Endpoint</h4>
-                    <h2>80$ <span>Per Month</span></h2>
-                    <p>Less Than 10000 Requests Per Day (IP/Origin)</p>
-                </div>
+    
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#pricingCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#pricingCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
             </div>
         </div>
     </section>
+    
+    
 
 
 
@@ -439,7 +582,7 @@
 
 
 
-    <footer class="container-fluid footerSec">
+    <footer class="container-fluid footerSec" id="contact">
         <div class="container d-flex gap-5 align-items-start justify-content-center subSection">
             <div class="footerCol1 d-flex flex-column gap-4 align-items-start">
                 <div class="footerDetails d-flex flex-column gap-3">
@@ -481,15 +624,15 @@
 
     
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
-    <!-- Bootstrap Bundle -->
+   
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="js/scripts.js"></script>
-
-   
 
    
 </body>
